@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://kit.fontawesome.com/51ccae8c09.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+
+<html>
+
+<style>
+.background{
+  width: 1024px;
+  height: 768px;
+  background-color: #F5F6F8;
+}
+
+div.sticky-header{
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  height: 118px;
+}
+
+.stepper{
+  display: inline;
+  width: 170px;
+  height: 118px;
+}
+
+.icon{
+  display: inline;
+  color: #616161;
+}
+
+.responsive {
+  float: left;
+  width: 43%;
+  padding-top:28px;
+  padding-left:20px;
+}
+
+.selection{
+  background-color: #FFFFFF;
+
+  width: 40%;
+  float: left;
+  margin-left: 24px;
+  margin-bottom: 24px;
+}
+
+div.selection img{
+  width: 100%;
+  height: auto;
+}
+
+.button{
+  padding-top:20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.type-text{
+  padding-left:20px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+
+}
+.price{
+  padding-left:20px;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 10px;
+}
+
+.prototype{
+  padding-top:26px;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+  }
+}
+
+
+</style>
+
+<head>
+  <title>Page Title</title>
+</head>
+
+<body>
+
+  <div class="background">
+    <!-- Header -->
+    <div class="sticky-header">
+      <div class="stepper">
+        <img src="icons/Type-inactive.png" style="padding-left: 120px;">
+      </div>
+      <div class="icon"><i class="fas fa-caret-right"></i>
+      </div>
+      <div class="stepper">
+        <img src="icons/Flavor-inactive.png" style="padding-left: 10px;">
+      </div>
+      <div class="icon"><i class="fas fa-caret-right"></i>
+      </div>
+      <div class="stepper">
+        <img src="icons/Icing-inactive.png" style="padding-left: 10px;">
+      </div>
+      <div class="icon"><i class="fas fa-caret-right"></i>
+      </div>
+      <div class="stepper">
+        <img src="icons/Border-inactive.png" style="padding-left: 10px;">
+      </div>
+    </div>
+
+
+    <!-- Selection -->
+    <div class="responsive">
+
+      <div class="selection" >
+        <div class="button">
+          <img src="icons/Item - Full sheet - normal state.png" >
+        </div>
+        <div class="type-text">
+          <p>Full Sheet</p>
+        </div>
+        <div class="price">
+          <p>$42.99</p>
+        </div>
+      </div>
+
+      <div class="selection" >
+        <div class="button" >
+          <img src="icons/Item - Round - normal state-selected.png" >
+        </div>
+        <div class="type-text">
+          <p>Round</p>
+        </div>
+        <div class="price">
+          <p>$15.99</p>
+        </div>
+      </div>
+
+
+
+      <div class="selection">
+        <div class="button">
+          <img src="icons/Item - 2tier cake.png">
+        </div>
+        <div class="type-text">
+          <p>Full Sheet</p>
+        </div>
+        <div class="price">
+          <p>$42.99</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- Cake mockup -->
+
+    <div class="prototype">
+      <img src="icons/sheet/RoundCake_Icing_White.png">
+
+    </div>
+
+
+
+
+
+  </div>
+
+</body>
+</html>
