@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Create a cake</title>
 <meta charset="UTF-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +14,8 @@
 
 <style>
 .background{
-  width: 1024px;
-  height: 768px;
+  width: 1300px;
+  height: 720px;
   background-color: #F5F6F8;
 }
 
@@ -48,7 +48,6 @@ div.sticky-header{
 
 .selection{
   background-color: #FFFFFF;
-
   width: 40%;
   float: left;
   margin-left: 24px;
@@ -65,7 +64,7 @@ div.selection img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 36%;
 }
 
 .type-text{
@@ -83,6 +82,7 @@ div.selection img{
 
 .prototype{
   padding-top:26px;
+  padding-bottom: 40px;
 }
 
 
@@ -90,6 +90,74 @@ div.selection img{
   .responsive {
     width: 49.99999%;
   }
+}
+
+a{
+  text-decoration: none;
+}
+
+.bottom-sheet{
+  background-color: #FFFFFF;
+  /* position: sticky; */
+  /* display: inline-block; */
+  /* z-index: 3; */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px;
+  width: 1300px;
+  height: 90px;
+  float: left;
+  box-shadow: 0px -2px 6px 1px #DDDDDD;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 0px;
+}
+
+
+.CTAbutton1 {
+  font-size: 20px;
+  color: #0071E9;
+  display: inline-block;
+  width: 18%;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #0071E9;
+  line-height: 2.2;
+  margin-top: 20px;
+  margin-left:40px;
+}
+
+.CTAbutton3 {
+  font-size: 20px;
+  color: #0071E9;
+  display: inline-block;
+  width: 18%;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #0071E9;
+  line-height: 2.2;
+  margin-top: 20px;
+  margin-left:40px;
+}
+
+.CTAbutton2 {
+  font-size: 20px;
+  color: #FFFFFF;
+  display: inline-block;
+  width: 18%;
+  height: 50px;
+  text-decoration: none;
+  background-color: #0071E9;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #0071E9;
+  line-height: 2.2;
+  float: right;
+  margin-top: 20px;
+  margin-right:40px;
 }
 
 
@@ -105,22 +173,22 @@ div.selection img{
     <!-- Header -->
     <div class="sticky-header">
       <div class="stepper">
-        <img src="icons/Type-inactive.png" style="padding-left: 120px;">
+        <img src="icons/stepper/Type-inactive.png" style="padding-left: 240px;">
       </div>
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
       <div class="stepper">
-        <img src="icons/Flavor-inactive.png" style="padding-left: 10px;">
+        <img src="icons/stepper/Flavor-selected.png" style="padding-left: 10px;">
       </div>
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
       <div class="stepper">
-        <img src="icons/Icing-inactive.png" style="padding-left: 10px;">
+        <img src="icons/stepper/Icing-inactive.png" style="padding-left: 10px;">
       </div>
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
       <div class="stepper">
-        <img src="icons/Border-inactive.png" style="padding-left: 10px;">
+        <img src="icons/stepper/Border-inactive.png" style="padding-left: 10px;">
       </div>
     </div>
 
@@ -130,39 +198,28 @@ div.selection img{
 
       <div class="selection" >
         <div class="button">
-          <img src="icons/Item - Full sheet - normal state.png" >
+          <img src="icons/flavor/Item - Sheet Flavor - Vanilla - selected.png" >
         </div>
         <div class="type-text">
-          <p>Full Sheet</p>
-        </div>
-        <div class="price">
-          <p>$42.99</p>
+          <p>Vanilla</p>
         </div>
       </div>
 
       <div class="selection" >
         <div class="button" >
-          <img src="icons/Item - Round - normal state-selected.png" >
+          <img src="icons/flavor/Item - Sheet Flavor - Chocolate.png" >
         </div>
         <div class="type-text">
-          <p>Round</p>
-        </div>
-        <div class="price">
-          <p>$15.99</p>
+          <p>Chocolate</p>
         </div>
       </div>
 
-
-
       <div class="selection">
         <div class="button">
-          <img src="icons/Item - 2tier cake.png">
+          <img src="icons/flavor/Item - Sheet Flavor - Marble.png">
         </div>
         <div class="type-text">
-          <p>Full Sheet</p>
-        </div>
-        <div class="price">
-          <p>$42.99</p>
+          <p>Marble</p>
         </div>
       </div>
 
@@ -170,10 +227,15 @@ div.selection img{
     <!-- Cake mockup -->
 
     <div class="prototype">
-      <img src="icons/sheet/RoundCake_Icing_White.png">
-
+      <img src="icons/sheet/RoundCake_Icing_White_chocolate.png">
     </div>
 
+    <!-- CTA -->
+    <div class="bottom-sheet">
+      <a href="index.html" style="text-decoration: none;"><div class="CTAbutton1">Cancel order </div></a>
+        <a href="custo-1-roundsheet.html" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a>
+        <a href="custo-2-flavor.html" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
+      </div>
 
 
 
