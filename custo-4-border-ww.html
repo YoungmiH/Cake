@@ -43,41 +43,53 @@ div.sticky-header{
   float: left;
   width: 43%;
   padding-top:28px;
-  padding-left:20px;
+  padding-left:40px;
 }
 
 .selection{
   background-color: #FFFFFF;
-  width: 40%;
+  width: 46%;
   float: left;
-  margin-left: 24px;
-  margin-bottom: 24px;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+.colorchip{
+  display: inline-block;
+  padding-left: 20px;
 }
 
 div.selection img{
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 
 .button{
   padding-top:20px;
   display: block;
-  margin-left: auto;
+  margin-left: 85px;
   margin-right: auto;
   width: 40%;
 }
 
 .type-text{
-  padding-left:20px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-
+  padding-top:20px;
+  text-align: center;
+  padding-bottom:18px;
 }
-.price{
-  padding-left:20px;
-  font-size: 13px;
-  font-family: 'Roboto', sans-serif;
-  padding-bottom: 10px;
+
+.pallet{
+  margin-left: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: inline-block;
+  float: left;
+}
+
+div.pallet img{
+  width: 100%;
 }
 
 .prototype{
@@ -98,9 +110,6 @@ a{
 
 .bottom-sheet{
   background-color: #FFFFFF;
-  /* position: sticky; */
-  /* display: inline-block; */
-  /* z-index: 3; */
   margin-left: auto;
   margin-right: auto;
   border-radius: 0px;
@@ -173,7 +182,7 @@ a{
     <!-- Header -->
     <div class="sticky-header">
       <div class="stepper">
-        <img src="icons/stepper/Type-selected.png" style="padding-left: 160px;">
+        <img src="icons/stepper/Type-inactive.png" style="padding-left: 160px;">
       </div>
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
@@ -188,72 +197,80 @@ a{
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
       <div class="stepper">
-        <img src="icons/stepper/Border-inactive.png" style="padding-left: 10px;">
+        <img src="icons/stepper/Border-selected.png" style="padding-left: 10px;">
       </div>
-  
-    <div class="icon"><i class="fas fa-caret-right"></i>
-    </div>
-      <div class="stepper">
-        <img src="icons/stepper/decor-Inactive.png" style="padding-left: 10px;">
+      <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
-    </div>
+        <div class="stepper">
+          <img src="icons/stepper/decor-Inactive.png" style="padding-left: 10px;">
+        </div>
+      </div>
 
 
     <!-- Selection -->
     <div class="responsive">
 
-      <div class="selection" ><a href="custo-1-fullsheet.html">
+      <div class="selection"> <a href=" ">
         <div class="button">
-          <img src="icons/Item - Full sheet - normal state.png" >
+          <img src="icons/border/Item - Top border - bid - Selected state.png" >
         </div>
         <div class="type-text">
-          <p>Full Sheet</p>
-        </div>
-        <div class="price">
-          <p>$42.99</p>
+         Beads
         </div></a>
       </div>
 
-      <div class="selection" ><a href="">
-        <div class="button" >
-          <img src="icons/Item - Round - normal state-selected.png" >
+      <div class="selection"><a href="custo-2-flavor-chocolate.html">
+        <div class="button">
+          <img src="icons/border/Item - Top border - shell - normal state.png">
         </div>
         <div class="type-text">
-          <p>Round</p>
-        </div>
-        <div class="price">
-          <p>$15.99</p>
+          Vanilla
         </div></a>
       </div>
 
-
-
-      <div class="selection">
-        <div class="button">
-          <img src="icons/Item - 2tier cake.png">
+      <div class="selection" style="width: 92.2%;">
+        <div class="type-text" style="text-align: left; padding-left: 40px; padding-bottom: 0px;">
+          Top border
         </div>
-        <div class="type-text">
-          <p>Full Sheet</p>
-        </div>
-        <div class="price">
-          <p>$42.99</p>
+        <div class="pallet">
+          <a href=" "><div class="colorchip"><img src="icons/pallet/white/selected state.png"></div></a>
+          <a href=" "><div class="colorchip"><img src="icons/pallet/yellow/normal state.png"></div></a>
+          <a href="custo-4-border-pw.html"><div class="colorchip"><img src="icons/pallet/lightpink/normal state.png"></div></a>
+          <div class="colorchip"><img src="icons/pallet/green/normal state.png"></div>
+          <div class="colorchip"><img src="icons/pallet/purple/normal state.png"></div>
+          <div class="colorchip"><img src="icons/pallet/brown/normal state.png"></div>
         </div>
       </div>
+
+      <div class="selection" style="width: 92.2%;">
+        <div class="type-text" style="text-align: left; padding-left: 40px; padding-bottom: 0px;">
+          Bottom border
+        </div>
+        <div class="pallet">
+          <a href=" "><div class="colorchip"><img src="icons/pallet/white/selected state.png"></div></a>
+          <a href=" "><div class="colorchip"><img src="icons/pallet/yellow/normal state.png"></div></a>
+          <a href=" "><div class="colorchip"><img src="icons/pallet/lightpink/normal state.png"></div></a>
+          <div class="colorchip"><img src="icons/pallet/green/normal state.png"></div>
+          <div class="colorchip"><img src="icons/pallet/purple/normal state.png"></div>
+          <div class="colorchip"><img src="icons/pallet/brown/normal state.png"></div>
+        </div>
+      </div>
+
 
     </div>
     <!-- Cake mockup -->
 
     <div class="prototype">
-      <img src="icons/sheet/RoundCake_Icing_White.png">
-
+      <img src="icons/sheet/RoundCake_Icing_White_border_white.png">
     </div>
 
     <!-- CTA -->
     <div class="bottom-sheet">
       <a href="index.html" style="text-decoration: none;"><div class="CTAbutton1">Cancel order </div></a>
-        <a href="custo-1-fullsheet.html" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a>
-        <a href="custo-2-flavor-vanilla.html" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
+        <a href="" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a>
+        <a href="" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
       </div>
+
 
 
 

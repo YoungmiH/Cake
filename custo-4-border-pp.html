@@ -43,45 +43,54 @@ div.sticky-header{
   float: left;
   width: 43%;
   padding-top:28px;
-  padding-left:20px;
-  display: block;
+  padding-left:40px;
 }
 
 .selection{
   background-color: #FFFFFF;
-  width: 90%;
-  /* float: left; */
-  margin-left: 24px;
-  margin-bottom: 1px;
-  /* border-radius: 6px; */
-  display: block;
+  width: 46%;
+  float: left;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
 
+.colorchip{
+  display: inline-block;
+  padding-left: 20px;
 }
 
 div.selection img{
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 
 .button{
   padding-top:20px;
-  display: inline-block;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  display: block;
+  margin-left: 85px;
   margin-right: auto;
-
+  width: 40%;
 }
 
 .type-text{
-  padding-left:40px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  display: inline-block;
-  line-height: 0.8;
-  vertical-align: middle;
-
+  padding-top:20px;
+  text-align: center;
+  padding-bottom:18px;
 }
 
+.pallet{
+  margin-left: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: inline-block;
+  float: left;
+}
+
+div.pallet img{
+  width: 100%;
+}
 
 .prototype{
   padding-top:26px;
@@ -173,7 +182,7 @@ a{
     <!-- Header -->
     <div class="sticky-header">
       <div class="stepper">
-        <img src="icons/stepper/Type-inactive.png" style="padding-left: 240px;">
+        <img src="icons/stepper/Type-inactive.png" style="padding-left: 160px;">
       </div>
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
@@ -183,14 +192,19 @@ a{
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
       <div class="stepper">
-        <img src="icons/stepper/Icing-selected.png" style="padding-left: 10px;">
+        <img src="icons/stepper/Icing-inactive.png" style="padding-left: 10px;">
       </div>
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
       <div class="stepper">
-        <img src="icons/stepper/Border-inactive.png" style="padding-left: 10px;">
+        <img src="icons/stepper/Border-selected.png" style="padding-left: 10px;">
       </div>
-    </div>
+      <div class="icon"><i class="fas fa-caret-right"></i>
+      </div>
+        <div class="stepper">
+          <img src="icons/stepper/decor-Inactive.png" style="padding-left: 10px;">
+        </div>
+      </div>
 
 
     <!-- Selection -->
@@ -198,53 +212,63 @@ a{
 
       <div class="selection"> <a href=" ">
         <div class="button">
-          <img src="icons/icing/Item - Sheet Icing - Butter creme - active.png" >
+          <img src="icons/border/Item - Top border - bid - Selected state.png" >
         </div>
         <div class="type-text">
-          Butter creme
+         Beads
         </div></a>
       </div>
 
       <div class="selection"><a href="custo-2-flavor-chocolate.html">
-        <div class="button" style="padding-left: 50px;">
-          <img src="icons/flavor/Item - Sheet Flavor - Vanilla - selected.png">
+        <div class="button">
+          <img src="icons/border/Item - Top border - shell - normal state.png">
         </div>
         <div class="type-text">
           Vanilla
         </div></a>
       </div>
 
-      <div class="selection"><a href="custo-2-flavor-chocolate.html">
-        <div class="button" style="padding-left: 50px;">
-          <img src="icons/flavor/Item - Sheet Flavor - Chocolate.png">
+      <div class="selection" style="width: 92.2%;">
+        <div class="type-text" style="text-align: left; padding-left: 40px; padding-bottom: 0px;">
+          Top border
         </div>
-        <div class="type-text">
-          Chocolate
-        </div></a>
+        <div class="pallet">
+          <a href=" "><div class="colorchip"><img src="icons/pallet/white/normal state.png"></div></a>
+          <a href=" "><div class="colorchip"><img src="icons/pallet/yellow/normal state.png"></div></a>
+          <a href=" "><div class="colorchip"><img src="icons/pallet/lightpink/selected state.png"></div></a>
+          <div class="colorchip"><img src="icons/pallet/green/normal state.png"></div>
+          <div class="colorchip"><img src="icons/pallet/purple/normal state.png"></div>
+          <div class="colorchip"><img src="icons/pallet/brown/normal state.png"></div>
+        </div>
       </div>
 
-      <div class="selection">
-        <div class="button">
-          <img src="icons/icing/Item - Sheet Icing - Whipped cream - normal.png">
+      <div class="selection" style="width: 92.2%;">
+        <div class="type-text" style="text-align: left; padding-left: 40px; padding-bottom: 0px;">
+          Bottom border
         </div>
-        <div class="type-text">
-          <p>Whipped cream</p>
-          <p style="font-size: 14px; color: #8492A8;">(Vanilla only)</p>
+        <div class="pallet">
+          <a href=" "><div class="colorchip"><img src="icons/pallet/white/normal state.png"></div></a>
+          <a href=" "><div class="colorchip"><img src="icons/pallet/yellow/normal state.png"></div></a>
+          <a href=" "><div class="colorchip"><img src="icons/pallet/lightpink/normal state.png"></div></a>
+          <div class="colorchip"><img src="icons/pallet/green/normal state.png"></div>
+          <div class="colorchip"><img src="icons/pallet/purple/selected state.png"></div>
+          <div class="colorchip"><img src="icons/pallet/brown/normal state.png"></div>
         </div>
       </div>
+
 
     </div>
     <!-- Cake mockup -->
 
     <div class="prototype">
-      <img src="icons/sheet/RoundCake_Icing_White_chocolate.png">
+      <img src="icons/sheet/RoundCake_Icing_White_topborder-pink-bottomborder-purple.png">
     </div>
 
     <!-- CTA -->
     <div class="bottom-sheet">
       <a href="index.html" style="text-decoration: none;"><div class="CTAbutton1">Cancel order </div></a>
         <a href="custo-1-roundsheet.html" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a>
-        <a href="custo-2-flavor.html" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
+        <a href="custo-5-decor-sprinkles.html" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
       </div>
 
 
