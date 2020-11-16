@@ -44,14 +44,18 @@ div.sticky-header{
   width: 43%;
   padding-top:28px;
   padding-left:20px;
+  display: block;
 }
 
 .selection{
   background-color: #FFFFFF;
-  width: 40%;
-  float: left;
+  width: 90%;
+  /* float: left; */
   margin-left: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 1px;
+  /* border-radius: 6px; */
+  display: block;
+
 }
 
 div.selection img{
@@ -61,24 +65,23 @@ div.selection img{
 
 .button{
   padding-top:20px;
-  display: block;
-  margin-left: auto;
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 20px;
   margin-right: auto;
-  width: 40%;
+
 }
 
 .type-text{
-  padding-left:20px;
+  padding-left:40px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  line-height: 0.8;
+  vertical-align: middle;
 
 }
-.price{
-  padding-left:20px;
-  font-size: 13px;
-  font-family: 'Roboto', sans-serif;
-  padding-bottom: 10px;
-}
+
 
 .prototype{
   padding-top:26px;
@@ -98,9 +101,6 @@ a{
 
 .bottom-sheet{
   background-color: #FFFFFF;
-  /* position: sticky; */
-  /* display: inline-block; */
-  /* z-index: 3; */
   margin-left: auto;
   margin-right: auto;
   border-radius: 0px;
@@ -173,7 +173,7 @@ a{
     <!-- Header -->
     <div class="sticky-header">
       <div class="stepper">
-        <img src="icons/stepper/Type-selected.png" style="padding-left: 240px;">
+        <img src="icons/stepper/Type-inactive.png" style="padding-left: 240px;">
       </div>
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
@@ -183,7 +183,7 @@ a{
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
       <div class="stepper">
-        <img src="icons/stepper/Icing-inactive.png" style="padding-left: 10px;">
+        <img src="icons/stepper/Icing-selected.png" style="padding-left: 10px;">
       </div>
       <div class="icon"><i class="fas fa-caret-right"></i>
       </div>
@@ -196,41 +196,40 @@ a{
     <!-- Selection -->
     <div class="responsive">
 
-      <div class="selection" ><a href="custo-1-fullsheet.html">
+      <div class="selection"> <a href=" ">
         <div class="button">
-          <img src="icons/Item - Full sheet - normal state.png" >
+          <img src="icons/icing/Item - Sheet Icing - Butter creme - active.png" >
         </div>
         <div class="type-text">
-          <p>Full Sheet</p>
-        </div>
-        <div class="price">
-          <p>$42.99</p>
+          Butter creme
         </div></a>
       </div>
 
-      <div class="selection" ><a href="">
-        <div class="button" >
-          <img src="icons/Item - Round - normal state-selected.png" >
+      <div class="selection"><a href="custo-2-flavor-chocolate.html">
+        <div class="button" style="padding-left: 50px;">
+          <img src="icons/flavor/Item - Sheet Flavor - Vanilla - selected.png">
         </div>
         <div class="type-text">
-          <p>Round</p>
-        </div>
-        <div class="price">
-          <p>$15.99</p>
+          Vanilla
         </div></a>
       </div>
 
-
+      <div class="selection"><a href="custo-2-flavor-chocolate.html">
+        <div class="button" style="padding-left: 50px;">
+          <img src="icons/flavor/Item - Sheet Flavor - Chocolate.png">
+        </div>
+        <div class="type-text">
+          Chocolate
+        </div></a>
+      </div>
 
       <div class="selection">
         <div class="button">
-          <img src="icons/Item - 2tier cake.png">
+          <img src="icons/icing/Item - Sheet Icing - Whipped cream - normal.png">
         </div>
         <div class="type-text">
-          <p>Full Sheet</p>
-        </div>
-        <div class="price">
-          <p>$42.99</p>
+          <p>Whipped cream</p>
+          <p style="font-size: 14px; color: #8492A8;">(Vanilla only)</p>
         </div>
       </div>
 
@@ -238,16 +237,16 @@ a{
     <!-- Cake mockup -->
 
     <div class="prototype">
-      <img src="icons/sheet/RoundCake_Icing_White.png">
-
+      <img src="icons/sheet/RoundCake_Icing_White_chocolate.png">
     </div>
 
     <!-- CTA -->
     <div class="bottom-sheet">
       <a href="index.html" style="text-decoration: none;"><div class="CTAbutton1">Cancel order </div></a>
-        <a href="custo-1-fullsheet.html" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a>
-        <a href="custo-2-flavor-vanilla.html" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
+        <a href="custo-1-roundsheet.html" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a>
+        <a href="custo-4-border.html" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
       </div>
+
 
 
 
