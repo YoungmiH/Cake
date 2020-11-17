@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Create a cake</title>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://kit.fontawesome.com/51ccae8c09.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+
+
+<html>
+
+<style>
+
+body {
+  font: 14px "Open Sans", "Arial", sans-serif;
+}
+
+video {
+  /* margin-top: 2px; */
+  border: 1px solid black;
+}
+
+
+
+.title{
+  color: #5D6781;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: lighter;
+  padding-bottom: 50px;
+}
+
+.section-title{
+  font-family: 'Roboto', sans-serif;
+  color: #5D6781;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  padding-left: 290px;
+  padding-bottom: 30px;
+}
+
+.left {
+  /* margin-right: 100px; */
+  float: left;
+  width: 160px;
+  /* padding: 0px; */
+  position: absolute;
+  display: block;
+}
+
+.control{
+  display: inline-block;
+  position: absolute;
+  padding-top: 80px;
+
+}
+
+.right {
+  margin-left: 650px;
+  float: left;
+  width: 160px;
+  padding: 0px;
+}
+
+.bottom {
+  clear: both;
+  padding-top: 10px;
+}
+
+
+
+.bottom-sheet{
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px;
+  width: 1300px;
+  height: 90px;
+  float: left;
+  box-shadow: 0px -2px 6px 1px #DDDDDD;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 0px;
+  margin-top:70px;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: 160px;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  background-color: #0071E9;
+  color: #FFFFFF;
+  border-radius: 25px;
+  height: 40px;
+  text-decoration: none;
+  margin-top: 350px;
+  line-height: 2.2;
+
+}
+
+.CTAbutton1 {
+  font-size: 20px;
+  color: #0071E9;
+  display: inline-block;
+  width: 18%;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #0071E9;
+  line-height: 2.2;
+  margin-top: 20px;
+  margin-left:40px;
+}
+
+.CTAbutton3 {
+  font-size: 20px;
+  color: #0071E9;
+  display: inline-block;
+  width: 18%;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #0071E9;
+  line-height: 2.2;
+  margin-top: 20px;
+  margin-left:40px;
+}
+
+.CTAbutton2 {
+  font-size: 20px;
+  color: #FFFFFF;
+  display: inline-block;
+  width: 18%;
+  height: 50px;
+  text-decoration: none;
+  background-color: #0071E9;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #0071E9;
+  line-height: 2.2;
+  float: right;
+  margin-top: 20px;
+  margin-right:40px;
+}
+
+
+
+</style>
+
+
+
+<head>
+</head>
+
+<body>
+
+<div class="title"> Record your message on the camera</div>
+
+
+<div class="section-title">Preview</div>
+
+  <div class="left">
+    <video id="preview" style="width: 650px; height:360px; position: absolute; margin-left:0;  z-index: -1;" autoplay muted ></video>
+  </div>
+
+<div class="control" style="padding-left:40px;">
+  <div id="startButton" class="button">
+    Start record
+  </div>
+  <div id="stopButton" class="button">
+    Stop record
+  </div>
+  <a id="downloadButton" class="button" style="border: 2px solid #0071E9;   background-color: #FFFFFF;  color: #0071E9;">
+    Download
+  </a>
+</div>
+
+<div class="section-title" style="padding-left:600px;">Recording</div>
+
+  <div class="right">
+    <video id="recording" width="650" height="360" controls></video>
+
+  </div>
+
+
+  <div class="bottom">
+    <pre id="log"></pre>
+  </div>
+
+<script>
+
+let preview = document.getElementById("preview");
+let recording = document.getElementById("recording");
+let startButton = document.getElementById("startButton");
+let stopButton = document.getElementById("stopButton");
+let downloadButton = document.getElementById("downloadButton");
+let logElement = document.getElementById("log");
+
+let recordingTimeMS = 10000;
+function log(msg) {
+  logElement.innerHTML += msg + "\n";
+}
+function wait(delayInMS) {
+  return new Promise(resolve => setTimeout(resolve, delayInMS));
+}
+function startRecording(stream, lengthInMS) {
+  let recorder = new MediaRecorder(stream);
+  let data = [];
+
+  recorder.ondataavailable = event => data.push(event.data);
+  recorder.start();
+  log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
+
+  let stopped = new Promise((resolve, reject) => {
+    recorder.onstop = resolve;
+    recorder.onerror = event => reject(event.name);
+  });
+
+  let recorded = wait(lengthInMS).then(
+    () => recorder.state == "recording" && recorder.stop()
+  );
+
+  return Promise.all([
+    stopped,
+    recorded
+  ])
+  .then(() => data);
+}
+function stop(stream) {
+  stream.getTracks().forEach(track => track.stop());
+}
+startButton.addEventListener("click", function() {
+  navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: true
+  }).then(stream => {
+    preview.srcObject = stream;
+    downloadButton.href = stream;
+    preview.captureStream = preview.captureStream || preview.mozCaptureStream;
+    return new Promise(resolve => preview.onplaying = resolve);
+  }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
+  .then (recordedChunks => {
+    let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+    recording.src = URL.createObjectURL(recordedBlob);
+    downloadButton.href = recording.src;
+    downloadButton.download = "RecordedVideo.webm";
+
+    log("Successfully recorded " + recordedBlob.size + " bytes of " +
+        recordedBlob.type + " media.");
+  })
+  .catch(log);
+}, false);stopButton.addEventListener("click", function() {
+  stop(preview.srcObject);
+}, false);
+
+</script>
+
+
+<!-- CTA -->
+<div class="bottom-sheet">
+  <a href="index.html" style="text-decoration: none;"><div class="CTAbutton1">Cancel order </div></a>
+    <a href="" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a>
+    <a href="custo-1-fullsheet.html" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
+  </div>
+
+
+
+  </body>
+
+  </html>
