@@ -1,7 +1,11 @@
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+
 <script>
+
+
   AFRAME.registerComponent('rotation-reader', {
     tick: function () {
       // `this.el` is the element.
@@ -14,6 +18,8 @@
       console.log(this.el.object3D.position);
     }
   });
+
+
 
   window.onload = function() {
     AFRAME.registerComponent("videohandler", {
@@ -39,6 +45,8 @@
       }
     });
   };
+
+
 </script>
 
 <style>
@@ -62,7 +70,23 @@
   }
 </style>
 
+
+
+
+
 <body style="margin : 0px; overflow: hidden;">
+
+  <a-scene cursor="rayOrigin:mouse">
+    <a-assets>
+      <audio id="neigh" crossorigin="anonymous" src="https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2FMovie%20on%2011-17-20%20at%206.26%20PM.export.mov?v=1605666525953"></audio>
+    </a-assets>
+
+    <a-box position = "0  0 -2" audiohandler>
+
+    </a-box>
+  </a-scene>
+
+
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
@@ -76,7 +100,7 @@
   <a-assets>
 
     <video
-    src="https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2Ffireworks.mov?v=1602479873433"
+    src="https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2FMovie%20on%2011-17-20%20at%206.26%20PM.export.mov?v=1605666525953"
     preload="auto"
     id="vid"
     response-type="arraybuffer"
@@ -103,7 +127,7 @@
   <a-video
   src="#vid"
   position="100 0 0"
-  rotation="75 -180 0"
+  rotation="75 -190 0"
   width="200"
   height="175">
 </a-video>
@@ -118,17 +142,19 @@
 </a-entity>
 </a-scene>
 
-<!-- <a-entity cursor position="0 0 -5"></a-entity>
 
-<a-entity id="elmo" geometry="primitive: box" material="src: elmo.png"
-          sound="src: url(ticklelaugh.mp3); on: click"></a-entity> -->
+
+
+
+
 <!-- <a-scene>
   <a-sound
-  src="src: url(https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2Ffireworks.mov?v=1602479873433)"
+  src="src: url(https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2FMovie%20on%2011-17-20%20at%206.26%20PM.export.mov?v=1605666525953)"
   autoplay="true"
   position="0 2 5">
 </a-sound>
 </a-scene> -->
+
 
 
 
