@@ -47,6 +47,35 @@
   };
 
 
+
+  // window.onload = function() {
+  //   AFRAME.registerComponent("soundhandler", {
+  //     init: function() {
+  //       var marker = this.el;
+  //
+  //       this.river = document.querySelector("#river");
+  //
+  //       marker.addEventListener(
+  //       "markerFound",
+  //       function() {
+  //         this.river.play();
+  //       }.bind(this)
+  //       );
+  //
+  //       marker.addEventListener(
+  //       "markerLost",
+  //       function() {
+  //         this.river.pause();
+  //         this.river.currentTime = 0;
+  //       }.bind(this)
+  //       );
+  //     }
+  //   });
+  // };
+
+
+
+
 </script>
 
 <style>
@@ -89,6 +118,9 @@
   embedded
   arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
   >
+
+
+
   <a-assets>
 
     <video
@@ -96,56 +128,63 @@
     preload="auto"
     id="vid"
     response-type="arraybuffer"
-    loop
+    <!-- loop -->
     crossorigin
     webkit-playsinline
-    autoplay
-    muted
+    <!-- autoplay -->
+    <!-- muted -->
     playsinline
     ></video>
+
+
+    <!-- <a-entity
+    id="river"
+    geometry="primitive: plane"
+    material="color: blue" 
+    position="-10 0 0"
+    sound="src: url(https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2FMovie%20on%2011-17-20%20at%206.26%20PM.export.mov?v=1605666525953); autoplay: false"
+    ></a-entity> -->
+
+
   </a-assets>
 
   <a-nft
   rotation-reader
   videohandler
-  type="nft"
 
+  type="nft"
   url="https://nft.tripod-digital.co.nz/nft/ahn.howe@gmail.com/test2"
   smooth="true"
   smoothcount="10"
   smoothtolerance="0.01"
   smooththreshold="5"
   >
+
+
   <a-video
   src="#vid"
   position="100 0 0"
   rotation="75 -190 0"
   width="200"
   height="175">
-</a-video>
+  </a-video>
+
+  <!-- <a-sound
+  src="#river"
+  ></a-sound> -->
+
 
 </a-nft>
-<!-- <a-entity id="parent" rotation="0 45 0"> -->
 
-<!-- <a-entity camera> </a-entity> -->
 <a-entity camera look-controls>
+
   <a-entity geometry="primitive: plane; height: 0.2; width: 0.2" position="0 0 -1"
   material="color: gray; opacity: 0.5"></a-entity>
+
 </a-entity>
+
+
 </a-scene>
-
-
-
-
-
-
-<!-- <a-scene>
-  <a-sound
-  src="src: url(https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2FMovie%20on%2011-17-20%20at%206.26%20PM.export.mov?v=1605666525953)"
-  autoplay="true"
-  position="0 2 5">
-</a-sound>
-</a-scene> -->
 
 
 
