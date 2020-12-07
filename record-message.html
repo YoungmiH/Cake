@@ -17,6 +17,11 @@
 <html>
 
 <style>
+.background{
+  width: 1332px;
+  height: 663px;
+  background-color: #F5F6F8;
+}
 
 body {
   font: 14px "Open Sans", "Arial", sans-serif;
@@ -36,18 +41,24 @@ video {
   text-align: center;
   padding-top: 30px;
   font-weight: lighter;
-  padding-bottom: 50px;
+  padding-bottom: 38px;
 }
 
 .section-title{
   font-family: 'Roboto', sans-serif;
   color: #5D6781;
-  font-size: 16px;
-  position: relative;
+  font-size: 18px;
   display: inline;
-  width: 50%;
-  text-align: center;
-  margin-left: 290px;
+  padding-left: 300px;
+}
+
+.section-title1{
+  font-family: 'Roboto', sans-serif;
+  color: #5D6781;
+  font-size: 18px;
+  display: inline;
+  padding-left: 620px;
+
 }
 
 .left {
@@ -60,10 +71,11 @@ video {
 }
 
 .control{
-  display: inline-block;
+  width: 100%;
+  /* display: inline; */
   position: absolute;
-  padding-top: 80px;
-
+  padding-top: 45px;
+  padding-left: 230px;
 }
 
 .right {
@@ -85,8 +97,8 @@ video {
   margin-left: auto;
   margin-right: auto;
   border-radius: 0px;
-  width: 1340px;
-  height: 90px;
+  width: 1332px;
+  height: 70px;
   float: left;
   box-shadow: 0px -2px 6px 1px #DDDDDD;
   font-family: 'Roboto', sans-serif;
@@ -97,6 +109,7 @@ video {
 .button {
   cursor: pointer;
   display: inline-block;
+  position: relative;
   width: 160px;
   font-size: 16px;
   text-align: center;
@@ -172,32 +185,31 @@ video {
 
 <div class="title"> Record your message on the camera</div>
 
-
+<div>
 <div class="section-title">Preview</div>
+<div class="section-title1">Recording</div>
+</div>
 
   <div class="left" style="padding-top: 10px;">
     <video id="preview" style="width: 670px; height:360px; position: absolute; margin-left:0;  z-index: -1;" autoplay muted ></video>
   </div>
 
+  <div class="right" style="padding-top: 10px; padding-left: 31px;">
+    <video id="recording" width="650" height="360" controls></video>
+  </div>
+
+
 <div class="control">
-  <div id="startButton" class="button" style="background-color: red; width:80px;">
+  <div id="startButton" class="button" style="background-color: red; width:80px; margin-left:20px;">
     <i class="fas fa-video"></i>
   </div>
-  <div id="stopButton" class="button"  style="background-color: black; width:80px;">
+  <div id="stopButton" class="button"  style="background-color: black; width:80px; margin-left:20px;">
     <i class="fas fa-stop"></i>
   </div>
-
-  <a id="downloadButton" class="button" style="border: 2px solid #0071E9;   background-color: #FFFFFF;  color: #0071E9;">
-  Download
-</a>
-</div>
-
-<div class="section-title" style="padding-left: 300px;">Recording</div>
-
-  <div class="right">
-    <video id="recording" width="650" height="360" controls></video>
-
+  <div id="downloadButton" class="button" style="background-color: Black;  width:80px; margin-left:540px;">
+    <i class="fas fa-download"></i>
   </div>
+</div>
 
 
   <div class="bottom">
@@ -276,8 +288,8 @@ startButton.addEventListener("click", function() {
 <!-- CTA -->
 <div class="bottom-sheet">
   <a href="index.html" style="text-decoration: none;"><div class="CTAbutton1">Cancel order </div></a>
-    <a href="" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a>
-    <a href="enter-info.html" style="text-decoration: none;"><div class="CTAbutton2">Next</div></a>
+    <!-- <a href="" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a> -->
+    <a href="enter-info.html" style="text-decoration: none;"><div class="CTAbutton2">Enter delivery info</div></a>
   </div>
 
 
