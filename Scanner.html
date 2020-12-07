@@ -82,9 +82,15 @@
 </script>
 
 <style>
+
+  /* .background{
+    width: 1340px;
+    height: 663px;
+  } */
+
   .arjs-loader {
-    height: 100%;
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -101,21 +107,7 @@
     color: white;
   }
 
-<!--
-  .bottom-sheet{
-    background-color: #FFFFFF;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0px;
-    width: 1340px;
-    height: 100px;
-    float: left;
-    box-shadow: 0px -2px 6px 1px #DDDDDD;
-    font-family: 'Roboto', sans-serif;
-    padding-bottom: 0px;
-    margin-top:800px;
-    position: absolute;
-  } -->
+
 
 
 
@@ -130,38 +122,64 @@
     text-align: center;
     border-radius: 25px;
     border: 2px solid #0071E9;
-      font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 2.2;
     float: right;
-    margin-top: 800px;
-    margin-right:40px;
-    margin-bottom: 70px;
-
+    margin-top: 730px;
+    margin-right:50px;
   }
+
+
+  .CTAbutton4 {
+    font-size: 18px;
+    color: #FFFFFF;
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    text-decoration: none;
+    /* background-color: #0071E9; */
+    text-align: center;
+    border-radius: 25px;
+
+    font-family: 'Roboto', sans-serif;
+    line-height: 2.2;
+    float: right;
+    margin-top: 730px;
+    margin-right:200px;
+  }
+
+
 </style>
 
 
 
 
 
-<body style="margin : 0px; overflow: hidden;">
+<body>
 
 
   <div><a href="index.html" style="text-decoration: none;"><div class="CTAbutton2">Close</div></a></div>
 
 
-<div>
+
+
+
+
+
+
+
+
 <div class="camera" style="position: relative;">
 
 
 
-  <!-- <div class="bottom-sheet"> -->
-
-  <!-- </div> -->
-
+<div>
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
+</div>
+
+
 
   <a-scene
   vr-mode-ui="enabled: false;"
@@ -227,17 +245,16 @@
 
 </a-nft>
 
-<!-- <a-entity camera look-controls>
+<a-entity camera look-controls>
 
   <a-entity geometry="primitive: plane; height: 0.2; width: 0.2" position="0 0 -1"
   material="color: gray; opacity: 0.5"></a-entity>
 
-</a-entity> -->
+</a-entity>
 
 
 </a-scene>
 
-</div>
 </div>
 
 
