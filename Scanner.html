@@ -103,20 +103,15 @@
   }
 
 
-
-
-
   .CTAbutton2 {
     font-size: 20px;
     color: #FFFFFF;
-    display: inline-block;
     width: 10%;
     height: 50px;
     text-decoration: none;
     background-color: #0071E9;
     text-align: center;
     border-radius: 25px;
-    border: 2px solid #0071E9;
     font-family: 'Roboto', sans-serif;
     line-height: 2.2;
     float: right;
@@ -125,22 +120,6 @@
   }
 
 
-  /* .CTAbutton4 {
-  font-size: 18px;
-  color: #FFFFFF;
-  display: inline-block;
-  width: 40%;
-  height: 50px;
-  text-decoration: none;
-  /* background-color: #0071E9; */
-  /* text-align: center;
-  border-radius: 25px;
-  font-family: 'Roboto', sans-serif;
-  line-height: 2.2;
-  float: right;
-  margin-top: 730px;
-  margin-right:200px;
-} */
 
 
 </style>
@@ -149,89 +128,82 @@
 
 
 
-<body style="margin : 0px; overflow: hidden;">
+<body>
+
+  <div>
+    <a href="index.html" style="text-decoration: none;">
+      <div class="CTAbutton2">
+        Close
+      </div>c
+    </a>
+  </div>
 
 
-  <div><a href="index.html" style="text-decoration: none;"><div class="CTAbutton2">Close</div></a></div>
+<div style="margin : 0px; overflow: hidden;">
 
+  <div class="camera" style="position: relative;">
 
-
-    <div class="camera" style="position: relative;">
-
-
-
-      <div class="arjs-loader">
-        <div>Loading, please wait...</div>
-      </div>
-
-
-
-      <a-scene
-      vr-mode-ui="enabled: false;"
-      renderer="antialias: true; alpha: true; precision: mediump;"
-      embedded
-      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-      >
+    <div class="arjs-loader">
+      <div>Loading, please wait...</div>
+    </div>
 
 
 
-      <a-assets>
+    <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="antialias: true; alpha: true; precision: mediump;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+    >
 
-        <video
-        src="https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2Fmessage.mov?v=1607389545435"
-        preload="auto"
-        id="vid"
-        response-type="arraybuffer"
-        <!-- loop -->
-        crossorigin
-        webkit-playsinline
-        <!-- autoplay -->
-        <!-- muted -->
-        playsinline
-        ></video>
+    <a-assets>
+      <video
+      src="https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2Fmessage.mov?v=1607389545435"
+      preload="auto"
+      id="vid"
+      response-type="arraybuffer"
+      crossorigin
+      webkit-playsinline
+      playsinline
+      ></video>
+    </a-assets>
 
+    <a-nft
+    rotation-reader
+    videohandler
+    type="nft"
+    url="https://nft.tripod-digital.co.nz/nft/ahn.howe@gmail.com/test2"
+    smooth="true"
+    smoothcount="10"
+    smoothtolerance="0.01"
+    smooththreshold="5"
+    >
 
-      </a-assets>
-
-      <a-nft
-      rotation-reader
-      videohandler
-
-      type="nft"
-      url="https://nft.tripod-digital.co.nz/nft/ahn.howe@gmail.com/test2"
-      smooth="true"
-      smoothcount="10"
-      smoothtolerance="0.01"
-      smooththreshold="5"
-      >
-
-
-      <a-video
-      src="#vid"
-      position="100 0 0"
-      rotation="75 -190 0"
-      width="200"
-      height="175">
+    <a-video
+    src="#vid"
+    position="120 20 -30"
+    rotation="75 -170 0"
+    width="180"
+    height="155">
     </a-video>
 
 
-  </a-nft>
+    </a-nft>
 
-  <!-- <a-entity camera look-controls>
+    <!-- <a-entity camera look-controls>
 
-  <a-entity geometry="primitive: plane; height: 0.2; width: 0.2" position="0 0 -1"
-  material="color: gray; opacity: 0.5"></a-entity>
+          <a-entity
+          geometry="primitive: plane; height: 0.2; width: 0.2"
+          position="0 0 -1"
+          material="color: gray; opacity: 0.5">
+          </a-entity>
 
-</a-entity> -->
+    </a-entity> -->
 
-
-</a-scene>
+    </a-scene>
 
 </div>
-
-
 </div>
-
 
 
 

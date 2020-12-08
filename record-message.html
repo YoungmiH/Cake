@@ -88,7 +88,6 @@ video {
 
 .bottom {
   clear: both;
-  padding-top: 10px;
 }
 
 
@@ -104,6 +103,12 @@ video {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 0px;
   margin-top:29px;
+}
+
+div.bottom-sheet{
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
 }
 
 .button {
@@ -185,13 +190,7 @@ video {
   </div>
 </div>
 
-<div style="
-/* position: relative; */
-padding-top: 55px;
-padding-bottom: 22px;
-padding-left: 220px;
-display: block;
-">
+<div style="padding-top: 45px; padding-bottom: 22px; padding-left: 220px;">
   <div id="startButton" class="button" style="background-color: red; width:80px; ">
     <i class="fas fa-video"></i>
   </div>
@@ -203,10 +202,10 @@ display: block;
   </div>
 </div>
 
-<!--
+
   <div class="bottom">
     <pre id="log"></pre>
-  </div> -->
+  </div>
 
 
 
