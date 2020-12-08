@@ -83,11 +83,6 @@
 
 <style>
 
-  /* .background{
-    width: 1340px;
-    height: 663px;
-  } */
-
   .arjs-loader {
     width: 100%;
     height: 100%;
@@ -130,23 +125,22 @@
   }
 
 
-  .CTAbutton4 {
-    font-size: 18px;
-    color: #FFFFFF;
-    display: inline-block;
-    width: 40%;
-    height: 50px;
-    text-decoration: none;
-    /* background-color: #0071E9; */
-    text-align: center;
-    border-radius: 25px;
-
-    font-family: 'Roboto', sans-serif;
-    line-height: 2.2;
-    float: right;
-    margin-top: 730px;
-    margin-right:200px;
-  }
+  /* .CTAbutton4 {
+  font-size: 18px;
+  color: #FFFFFF;
+  display: inline-block;
+  width: 40%;
+  height: 50px;
+  text-decoration: none;
+  /* background-color: #0071E9; */
+  /* text-align: center;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 2.2;
+  float: right;
+  margin-top: 730px;
+  margin-right:200px;
+} */
 
 
 </style>
@@ -155,108 +149,88 @@
 
 
 
-<body>
+<body style="margin : 0px; overflow: hidden;">
 
 
   <div><a href="index.html" style="text-decoration: none;"><div class="CTAbutton2">Close</div></a></div>
 
 
 
+    <div class="camera" style="position: relative;">
 
 
 
+      <div class="arjs-loader">
+        <div>Loading, please wait...</div>
+      </div>
 
 
 
-
-<div class="camera" style="position: relative;">
-
-
-
-<div>
-  <div class="arjs-loader">
-    <div>Loading, please wait...</div>
-  </div>
-</div>
+      <a-scene
+      vr-mode-ui="enabled: false;"
+      renderer="antialias: true; alpha: true; precision: mediump;"
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+      >
 
 
 
-  <a-scene
-  vr-mode-ui="enabled: false;"
-  renderer="antialias: true; alpha: true; precision: mediump;"
-  embedded
-  arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-  >
+      <a-assets>
+
+        <video
+        src="https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2FMovie%20on%2011-17-20%20at%206.26%20PM.export.mov?v=1605666525953"
+        preload="auto"
+        id="vid"
+        response-type="arraybuffer"
+        <!-- loop -->
+        crossorigin
+        webkit-playsinline
+        <!-- autoplay -->
+        <!-- muted -->
+        playsinline
+        ></video>
 
 
+      </a-assets>
 
-  <a-assets>
+      <a-nft
+      rotation-reader
+      videohandler
 
-    <video
-    src="https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2FMovie%20on%2011-17-20%20at%206.26%20PM.export.mov?v=1605666525953"
-    preload="auto"
-    id="vid"
-    response-type="arraybuffer"
-    <!-- loop -->
-    crossorigin
-    webkit-playsinline
-    <!-- autoplay -->
-    <!-- muted -->
-    playsinline
-    ></video>
+      type="nft"
+      url="https://nft.tripod-digital.co.nz/nft/ahn.howe@gmail.com/test2"
+      smooth="true"
+      smoothcount="10"
+      smoothtolerance="0.01"
+      smooththreshold="5"
+      >
 
 
-    <!-- <a-entity
-    id="river"
-    geometry="primitive: plane"
-    material="color: blue" 
-    position="-10 0 0"
-    sound="src: url(https://cdn.glitch.com/6e5debc0-2ce5-46b4-9315-a0a512edbb9c%2FMovie%20on%2011-17-20%20at%206.26%20PM.export.mov?v=1605666525953); autoplay: false"
-    ></a-entity> -->
+      <a-video
+      src="#vid"
+      position="100 0 0"
+      rotation="75 -190 0"
+      width="200"
+      height="175">
+    </a-video>
 
 
-  </a-assets>
+  </a-nft>
 
-  <a-nft
-  rotation-reader
-  videohandler
-
-  type="nft"
-  url="https://nft.tripod-digital.co.nz/nft/ahn.howe@gmail.com/test2"
-  smooth="true"
-  smoothcount="10"
-  smoothtolerance="0.01"
-  smooththreshold="5"
-  >
-
-
-  <a-video
-  src="#vid"
-  position="100 0 0"
-  rotation="75 -190 0"
-  width="200"
-  height="175">
-  </a-video>
-
-  <!-- <a-sound
-  src="#river"
-  ></a-sound> -->
-
-
-</a-nft>
-
-<a-entity camera look-controls>
+  <!-- <a-entity camera look-controls>
 
   <a-entity geometry="primitive: plane; height: 0.2; width: 0.2" position="0 0 -1"
   material="color: gray; opacity: 0.5"></a-entity>
 
-</a-entity>
+</a-entity> -->
 
 
 </a-scene>
 
 </div>
 
+
+</div>
 
 
 
