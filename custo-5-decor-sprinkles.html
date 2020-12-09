@@ -11,7 +11,6 @@
 
 
 <html>
-
 <style>
 .background{
   width: 1332px;
@@ -39,11 +38,10 @@ div.sticky-header{
   color: #616161;
 }
 
-
 .responsive {
   float: left;
   width: 43%;
-  padding-top:32px;
+  padding-top:20px;
   padding-left:20px;
 }
 
@@ -52,34 +50,49 @@ div.sticky-header{
   width: 40%;
   float: left;
   margin-left: 24px;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 
 div.selection img{
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 
 .button{
   padding-top:20px;
   display: block;
-  margin-left: 75px;
+  margin-left: auto;
   margin-right: auto;
   width: 40%;
 }
 
 .type-text{
+  padding-left:20px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  text-align: center;
-  padding-top: 20px;
 
 }
 
+.direction{
+  width: 100%;
+  padding-left:20px;
+  padding-bottom:10px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: #616161;
+
+}
+
+.price{
+  padding-left:20px;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 10px;
+}
 
 .prototype{
   padding-top:32px;
-  padding-bottom: 32px;
+  padding-bottom: 36px;
 }
 
 
@@ -95,6 +108,9 @@ a{
 
 .bottom-sheet{
   background-color: #FFFFFF;
+  /* position: sticky; */
+  /* display: inline-block; */
+  /* z-index: 3; */
   margin-left: auto;
   margin-right: auto;
   border-radius: 0px;
@@ -103,7 +119,6 @@ a{
   float: left;
   box-shadow: 0px -2px 6px 1px #DDDDDD;
   font-family: 'Roboto', sans-serif;
-  margin-top: 6px;
 }
 
 
@@ -153,8 +168,6 @@ a{
   margin-top: 10px;
   margin-right:40px;
 }
-
-
 </style>
 
 <head>
@@ -194,7 +207,9 @@ a{
 
     <!-- Selection -->
     <div class="responsive">
-
+      <div class="direction">
+        Please select a decoration</div>
+        <div>
       <div class="selection">
         <div class="button">
           <img src="icons/decor/Item - Sprinkles - Selected.png" >
@@ -227,6 +242,7 @@ a{
       </div>
 
     </div>
+  </div>
 
     <!-- Cake mockup -->
 
@@ -236,7 +252,7 @@ a{
 
     <!-- CTA -->
     <div class="bottom-sheet">
-      <a href="index.html" style="text-decoration: none;"><div class="CTAbutton1">Cancel order </div></a>
+      <a href="index.html" style="text-decoration: none;"><div class="CTAbutton1">Start over </div></a>
         <!-- <a href="" style="text-decoration: none;"><div class="CTAbutton3">Back</div></a> -->
         <a href="record-message.html" style="text-decoration: none;"><div class="CTAbutton2">Record Video</div></a>
       </div>
@@ -244,7 +260,6 @@ a{
 
 
 
-  </div>
 
 </body>
 </html>
